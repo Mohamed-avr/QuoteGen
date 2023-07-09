@@ -26,6 +26,7 @@ export default function Home() {
   
   }, [])
 
+
  const ranIndexHandling = () => {
  let ranIndex = Math.floor(Math.random() * quotes.length);
  setIndexQuote(ranIndex);
@@ -39,12 +40,13 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-start justify-between pt-10 px-20">
+    <main className="flex min-h-[90vh] flex-col items-start justify-between top-0 pt-10 px-20 font-body">
                {randomQuote ? (
                   <> 
                   <div className='flex justify-between items-center w-full'> 
-                    <h2> genQoutes</h2>
+                    <h2 className='font-medium'> Quotes</h2>
                     <h2 className=' font-bold '> {indexQuote} </h2>
+                    <h2 className='font-extrabold'> .GenQoutes</h2>
                   </div>
 
                    <div className=' text-left  '>
@@ -54,7 +56,7 @@ export default function Home() {
                  
                     <button  
                         onClick={ranIndexHandling}
-                       className='text-neutral-700 px-3 py-2 border-2 border-neutral-700 '> generate
+                       className='text-neutral-700  py-2 border-2 rounded-3xl px-4 border-neutral-700 '> generate
                       </button>
                   </>
                 ) : (
