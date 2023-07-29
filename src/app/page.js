@@ -12,7 +12,6 @@ export default function Home() {
 
 
   useEffect(() => {
-
     async function fetchData() {
       const response = await fetch("https://type.fit/api/quotes");
       const data = await response.json();
